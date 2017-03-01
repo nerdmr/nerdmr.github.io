@@ -1,6 +1,6 @@
 ## Synopsis
 
-Josh.bruflodt.com project files.
+[Josh.Bruflodt.com](http://josh.bruflodt.com) project files.
 
 ## Motivation
 
