@@ -1,0 +1,315 @@
+ <!DOCTYPE html>
+<html lang="en" ng-app="my-bio">
+<head>
+  <title>Josh Bruflodt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="js/jspdf.js"></script>
+  <link rel="stylesheet" href="style.css">
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89642224-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+<!--
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+  -->
+<div class="text-center">
+  <div class="row content">
+    <div class="col-sm-6 bg-left"></div>
+	<div class="col-sm-6 bg-right"></div>
+	<div class="col-sm-12" style="padding:0;">
+		<div class="row inner-container">
+			<div class="col-sm-5 left fix" id="left-col" data-spy="affix" >
+				<div class="nametag">
+					<h2>Joshua Bruflodt</h2>	
+				</div>
+				<div class="emblem">
+					<div class="emblem-inner">
+						<!--<span class="l-1">J</span><span class="slash">/</span><span class="l-2">B</span>-->
+					</div>
+				</div>
+				<div class="caption">
+					<h3>Software Engineer</h3>
+				</div>
+				<div class="lb"></div>
+				<div class="left-section">
+					<h3 class="title">Expertise</h3>
+					<div class="section-icon check"></div>
+					<ul class="section-list">
+						<li>Full-Stack</li>
+						<li>Test Driven Development</li>
+						<li>Problem Solving</li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="lb"></div>
+				<div class="left-section">
+					<h3 class="title">Bread+Butter</h3>
+					<div class="section-icon skills"></div>
+					<div style="padding-left:45px;">
+						<ul class="section-list" style="margin: 0 auto;display:inline-block; ">
+							<li><div class="prof-3">ASP.NET</div></li>
+							<li><div class="prof-3">C#</div></li>
+							<li><div class="prof-3">JavaScript</div></li>
+							<li><div class="prof-3">CSS/SASS</div></li>
+							<li><div class="prof-3">SQL/MySQL</div></li>
+							<li><div class="prof-3">Mumps</div></li>
+							<li><div class="prof-2">BootStrap</div></li>
+						</ul>
+						<ul class="section-list" style="margin: 0 auto; display:inline-block;">
+							<li><div class="prof-2">PHP</div></li>
+							<li><div class="prof-2">AngularJS</div></li>
+							<li><div class="prof-1">TypeScript</div></li>
+							<li><div class="prof-1">Knockout</div></li>
+							<li><div class="prof-1">Java</div></li>
+							<li><div class="prof-1">Python</div></li>
+							<li><div class="prof-1">Agile Scrum</div></li>
+						</ul>
+					</div>
+					<!--<ul class="section-list" style="columns:2; max-width: 280px;  margin: 0 auto; ">
+						<li><div class="prof-3">ASP.NET</div></li>
+						<li><div class="prof-3">C#</div></li>
+						<li><div class="prof-3">JavaScript</div></li>
+						<li><div class="prof-3">CSS/SASS</div></li>
+						<li><div class="prof-3">SQL/MySQL</div></li>
+						<li><div class="prof-3">Mumps</div></li>
+						<li><div class="prof-2">BootStrap</div></li>
+						<li><div class="prof-2">PHP</div></li>
+						<li><div class="prof-2">AngularJS</div></li>
+						<li><div class="prof-1">TypeScript</div></li>
+						<li><div class="prof-1">Knockout</div></li>
+						<li><div class="prof-1">Java</div></li>
+						<li><div class="prof-1">Python</div></li>
+						<li><div class="prof-1">Agile Scrum</div></li>
+					</ul>-->
+				</div>
+				<div class="lb"></div>
+				<div class="left-section">
+					<h3 class="title">Hobbies</h3>
+					<div class="section-icon hobbies"></div>
+					<div style="padding-left:25px;">
+						<ul class="section-list" style="margin: 0 auto;display:inline-block; ">
+							<li><div class="item">Arduino</div></li>
+							<li><div class="item">Raspberry Pi</div></li>
+							<li><div class="item">Home Automation</div></li>
+						</ul>
+						<ul class="section-list" style="margin: 0 auto; display:inline-block;">
+							<li><div class="item">All the APIs</div></li>
+							<li><div class="item">VR/AR</div></li>
+							<li><div class="item">WordPress Dev</div></li>
+						</ul>
+					</div>
+				</div>
+				<div class="lb"></div>
+				<div class="left-section">
+					<h3 class="title">Get In Touch</h3>
+					<!--<div class="section-icon contact"></div>-->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="social-container">
+								<div class="bubble-button social email">
+									<a href="mailto:josh.bruflodt@gmail.com">
+										<i class="material-icons fa">mail</i>
+									</a>
+								</div>
+								<div class="bubble-button social facebook">
+									<a target="_blank" href="https://facebook.com/josh.bruflodt">
+										<i class="fa fa-facebook" aria-hidden="true"></i>
+									</a>
+								</div>
+								<div class="bubble-button social twitter">
+									<a target="_blank" href="https://twitter.com/nerdmr">
+										<i class="fa fa-twitter" aria-hidden="true"></i>
+									</a>
+								</div>
+								<div class="bubble-button social instagram">
+									<a target="_blank" href="https://instagram.com/nerdmr">
+										<i class="fa fa-instagram" aria-hidden="true"></i>
+									</a>
+								</div>
+								<div class="bubble-button linked-in social">
+									<a target="_blank" href="https://www.linkedin.com/in/josh-bruflodt-b1163724">
+										<i class="fa fa-linkedin" aria-hidden="true"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-7 pull-right right" id="right">
+				<div class="section incremental-fade show">
+					<div class="section-title profile icon">
+						<h2>Profile</h2>					
+					</div>
+					<div class="section-body">
+						<p>Solutions oriented Software Developer with nine years of professional experience. Skilled in developing full-stack applications with an emphasis on good user experiences. Excels at learning new languages, technologies, and platforms quickly and efficiently.</p>
+					</div>
+				</div>
+				<div class="section incremental-fade show">
+					<div class="section-title icon experience">
+						<h2>Experience</h2>					
+					</div>
+					<div class="section-body">
+						<h3>Software Developer <span class='sub-h3'>Epic Systems</span></h3>
+						<p>
+							<span class="lede">October 2011 – present</span> Primarily work on the Care Everywhere product which is responsible for making Epic's electronic health record interoperable with outside organizations. Originally joined as a software test engineer working on developing automated testing tools for complex, multi-instance databases and migrated to software developer role two and a half years ago.
+						</p>
+						<ul>
+								<li>Led development of the public facing website for Epic (http://epic.com). Worked with designers, content creators, and executive stakeholders to develop a secure website and content management solution giving users the ability to edit web site posts and pages.</li>
+								<li>Key developer in implementing image exchange between healthcare organizations using industry standard document communication protocol.</li>
+								<li>Developed several automated testing applications and frameworks allowing users to generate automated tests in areas including but not limited to web services across major versions and complex data structures spanning multiple database instances.</li>
+							</ul>
+						<h3>Senior Software Engineer <span class='sub-h3'>Aerosim Technologies</span></h3>
+						<p>
+						<span class="lede">May 2008 - October 2011</span> Started as a content developer for flight simulator desktop courseware lessons. In less than a year was promoted to software engineer in the research & development group. Conveyed exemplary development and testing skills and was recognized with increased responsibilities and expectations.
+						</p>
+						<ul>
+							<li>Developed courseware authoring tool for flight trainers to create and publish training material distributed to customers.</li>
+							<li>Led development of a learning management system and played a key role through all stages of development from outlining project details to user interface design and guidance to beta testing and deployment.</li>
+							<li>Converted desktop application content player to web deployable content. During project had to port C++ application to JavaScript equivalent allowing lesson content to be played in a web browser and removing operating system dependencies that existed in the original application.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="section incremental-fade show">
+					<div class="section-title icon education">
+						<h2>Education</h2>					
+					</div>
+					<div class="section-body">
+						<h3>Bachelor of Arts <span class='sub-h3'>Luther College</span></h3>
+						<p><span class="lede">September 2004 - May 2008</span> Attained Bachelor of Arts degree with majors in Physics and Mathematics and minor in Computer Science.</p>
+						<h3>Additional Coursework <span class='sub-h3'>University of Wisconsin - Madison</span></h3>
+						<p><span class="lede">June 2015 - December 2015</span> Enrolled in two classes related to algorithm design, artificial intelligence, and machine learning.</p>
+					</div>
+				</div>
+				<div class="section incremental-fade show">
+					<div class="section-title icon portfolio">
+						<h2>Portfolio</h2>					
+					</div>
+					<div class="section-body">
+						<div class="row portfolio">
+							<div class="col-sm-6 incremental-fade show">
+								<a href="#image5" class="wiggle"><div class="portfolio-img" style="background-image:url('images/tl-learning-ss.png');"></div></a>
+								<div class="lightbox short-animate" id="image5"><img title="TL Learning portal is a website for showing users ongoing learning resources"  class="long-animate" src="images/tl-learning-ss.png" /></div>
+								<div id="lightbox-controls" class="short-animate">
+									<a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+								</div>
+							</div>
+							<div class="col-sm-6 incremental-fade show">
+								<a href="#image5" class="wiggle"><div class="portfolio-img" style="background-image:url('images/tl-learning-2-ss.png');"></div></a>
+								<div class="lightbox short-animate" id="image5"><img title="The portal lets you write reviews and mark content as complete" class="long-animate" src="images/tl-learning-ss.png" /></div>
+								<div id="lightbox-controls" class="short-animate">
+									<a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+								</div>
+							</div>
+							<div class="col-sm-6 incremental-fade show">
+								<a href="#image2" class="wiggle"><div class="portfolio-img" style="background-image:url('images/syftr-ss.png');"></div></a>
+								<div class="lightbox short-animate" id="image2"><img class="long-animate" title="Syftr is a web app that lets you filter out available content on Netflix" src="images/syftr-ss.png" /></div>
+								<div id="lightbox-controls" class="short-animate">
+									<a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+								</div>								
+							</div>
+							<div class="col-sm-6 incremental-fade show">
+								<a href="#image1" class="wiggle"><div class="portfolio-img" style="background-image:url('images/census-ss.jpg');"></div></a>
+								<div class="lightbox short-animate" id="image1"><img title="Census is a tool that lets you monitor web service consumption" class="long-animate" src="images/census-ss.jpg" /></div>
+								<div id="lightbox-controls" class="short-animate">
+									<a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+								</div>
+							</div>							
+							<!--
+							<div class="col-sm-6 incremental-fade show">
+								<a href="#image2" class="wiggle"><div class="portfolio-img" style="background-image:url('images/census-ss-2.jpg');"></div></a>
+								<div class="lightbox short-animate" id="image2"><img class="long-animate" src="images/census-ss-2.jpg" /></div>
+								<div id="lightbox-controls" class="short-animate">
+									<a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+								</div>								
+							</div>-->
+							<div class="col-sm-6 incremental-fade show">
+								<a href="#image3" class="wiggle"><div class="portfolio-img" style="background-image:url('images/api-dashboard-ss.jpg');"></div></a>
+								<div class="lightbox short-animate" id="image3"><img class="long-animate" title="The API dashboard is an administrator tool for setting select set of properties of an API" src="images/api-dashboard-ss.jpg" /></div>
+								<div id="lightbox-controls" class="short-animate">
+									<a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+								</div>
+							</div>
+							<div class="col-sm-6 incremental-fade show">
+								<a href="#image4" class="wiggle"><div class="portfolio-img" style="background-image:url('images/epicdotcom-ss.jpg');"></div></a>
+								<div class="lightbox short-animate" id="image4"><img class="long-animate" src="images/epicdotcom-ss.jpg" /></div>
+								<div id="lightbox-controls" class="short-animate">
+									<a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<!--
+		<canvas class="pie" width="230" height="230">
+			<arc ng-repeat="arc in resume.sections" x="115" y="115" ng-attr-di="{{arc.di}}" ng-attr-df="{{arc.df}}"></arc>			
+		</canvas>-->
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  
+</footer>
+<div class="modal fade" tabindex="-1" role="dialog" id="message-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sound Off</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+			<form class="inline-form">
+				<textarea data-length=250 class="char-textarea"></textarea>
+			</form>
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="site.js"></script>
+</body>
+</html>
